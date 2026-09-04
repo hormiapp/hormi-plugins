@@ -10,14 +10,22 @@
   "plugins": [
     {
       "name": "hormi",
-      "description": "Track your household expenses from Claude Code. Records expenses and incomes, answers spending questions and manages categories in your Hormi household over the official MCP server, with OAuth consent.",
+      "description": "Track your household expenses from your assistant, over the official Hormi MCP server. Records expenses and incomes, answers spending questions and manages categories in your Hormi household, with OAuth consent.",
       "author": {
         "name": "Hormi",
         "email": "support@hormi.app"
       },
       "category": "productivity",
-      "keywords": ["expenses", "budget", "finance", "household", "gastos", "hormi", "mcp"],
-      "source": "./plugins/hormi",
+      "keywords": [
+        "expenses",
+        "budget",
+        "finance",
+        "household",
+        "gastos",
+        "hormi",
+        "mcp"
+      ],
+      "source": "./",
       "homepage": "https://hormi.app/mcp",
       "license": "MIT"
     }
