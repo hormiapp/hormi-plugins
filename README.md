@@ -18,7 +18,8 @@ todos los clientes; lo unico que cambia es como cada uno lo instala.
 | ChatGPT | Conector personalizado con la URL, si tu plan lo permite |
 | Cursor | Anade la URL en su configuracion MCP |
 | Codex | `codex mcp add hormi --url https://api.hormi.app/mcp` |
-| Grok y otros | Cualquier cliente MCP con inicio de sesion acepta la URL |
+| Grok Build | Marketplace de xAI (envio pendiente); mientras tanto, la URL |
+| Otros | Cualquier cliente MCP con inicio de sesion acepta la URL |
 
 Guia paso a paso por cliente: [hormi.app/docs/mcp](https://hormi.app/docs/mcp).
 
@@ -26,8 +27,9 @@ Solo el plugin de Claude Code esta verificado desde este repositorio. ChatGPT
 tiene su propio camino: OpenAI publica plugins desde su portal, donde se envia
 el endpoint del servidor y las habilidades, no un manifiesto alojado en un
 repositorio. Por eso ahi no hay nada que empaquetar aqui, aunque el plugin si
-exista. Grok todavia no tiene formato de plugin para MCP y se conecta con la
-URL.
+exista. Grok Build instala plugins desde el marketplace de xAI, que usa este mismo
+formato: el envio de Hormi esta pendiente de revision. Mientras tanto, y en
+cualquier otro cliente MCP, la URL funciona.
 
 La primera herramienta que uses abre el inicio de sesion de Hormi y la pantalla
 de permisos. En Claude Code, si no aparece, ejecuta `/mcp` y autoriza desde
