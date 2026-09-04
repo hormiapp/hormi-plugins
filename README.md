@@ -40,6 +40,7 @@ ahi. Requiere Hormi Plus (los 14 dias de prueba cuentan).
 | `.mcp.json` | Compartido: la URL del servidor y su transporte |
 | `skills/` | Compartido: tres habilidades en formato Agent Skills |
 | `.claude-plugin/plugin.json` | Claude Code |
+| `.grok-plugin/plugin.json` | Grok Build |
 | `.cursor-plugin/plugin.json` | Cursor |
 | `.plugin/plugin.json` | Clientes que leen el manifiesto generico |
 | `.claude-plugin/marketplace.json` | Claude Code exige el marketplace en la raiz del repositorio |
@@ -48,6 +49,22 @@ Los tres manifiestos declaran lo mismo y conviven como pares: ninguno es el
 principal. Las habilidades solo las aprovechan los clientes que soportan Agent
 Skills; el resto recibe igual las 16 herramientas y las instrucciones que el
 servidor envia en `initialize`.
+
+## Red y credenciales
+
+Declaracion para quien revise este plugin:
+
+- **Un solo endpoint.** El plugin habla unicamente con
+  `https://api.hormi.app/mcp` sobre HTTPS. No hay ninguna otra llamada de red.
+- **Sin secretos en el repositorio.** La autenticacion es OAuth 2.1 con PKCE:
+  el token lo emite `api.hormi.app` y lo guarda el cliente MCP. Aqui no hay
+  claves, tokens ni credenciales.
+- **Sin ejecucion de codigo local.** No hay hooks, comandos, agentes, binarios,
+  dependencias ni scripts de instalacion. El paquete son archivos Markdown y
+  dos JSON de configuracion.
+- **Telemetria.** El plugin no envia nada por su cuenta. El servidor si registra
+  el uso de herramientas en la cuenta Hormi del usuario, como el resto del
+  producto.
 
 ## Que puede hacer el asistente
 
@@ -103,6 +120,9 @@ Claude Code installs it as a plugin:
 /plugin marketplace add hormiapp/hormi-plugins
 /plugin install hormi@hormi
 ```
+
+The plugin talks to `https://api.hormi.app/mcp` and nothing else, over OAuth
+2.1; it ships no executable code, no hooks and no credentials.
 
 Every other client connects with the URL. Per-client instructions:
 [hormi.app/docs/mcp](https://hormi.app/docs/mcp). The manifests in
