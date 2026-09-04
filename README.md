@@ -22,10 +22,12 @@ todos los clientes; lo unico que cambia es como cada uno lo instala.
 
 Guia paso a paso por cliente: [hormi.app/docs/mcp](https://hormi.app/docs/mcp).
 
-Solo el plugin de Claude Code esta verificado desde este repositorio. ChatGPT y
-Grok no tienen un formato de plugin instalable para MCP: se conectan pegando la
-URL o desde el directorio de conectores del proveedor, asi que no hay nada que
-empaquetar aqui para ellos.
+Solo el plugin de Claude Code esta verificado desde este repositorio. ChatGPT
+tiene su propio camino: OpenAI publica plugins desde su portal, donde se envia
+el endpoint del servidor y las habilidades, no un manifiesto alojado en un
+repositorio. Por eso ahi no hay nada que empaquetar aqui, aunque el plugin si
+exista. Grok todavia no tiene formato de plugin para MCP y se conecta con la
+URL.
 
 La primera herramienta que uses abre el inicio de sesion de Hormi y la pantalla
 de permisos. En Claude Code, si no aparece, ejecuta `/mcp` y autoriza desde
