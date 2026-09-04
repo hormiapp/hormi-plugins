@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "hormi": {
+      "type": "http",
+      "url": "https://api.hormi.app/mcp",
+      "note": "Official Hormi MCP server. Uses OAuth: the first tool call opens the Hormi login and consent screen, or run /mcp to authorize manually. Requires Hormi Plus (the 14-day trial counts)."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hormi",
+  "description": "Official Hormi plugins: connect your household expense tracker to your coding assistant.",
+  "owner": {
+    "name": "Hormi",
+    "email": "support@hormi.app",
+    "url": "https://hormi.app"
+  },
+  "plugins": [
+    {
+      "name": "hormi",
+      "description": "Track your household expenses from Claude Code. Records expenses and incomes, answers spending questions and manages categories in your Hormi household over the official MCP server, with OAuth consent.",
+      "author": {
+        "name": "Hormi",
+        "email": "support@hormi.app"
+      },
+      "category": "productivity",
+      "keywords": ["expenses", "budget", "finance", "household", "gastos", "hormi", "mcp"],
+      "source": "./plugins/hormi",
+      "homepage": "https://hormi.app/mcp",
+      "license": "MIT"
+    }
+  ]
+}

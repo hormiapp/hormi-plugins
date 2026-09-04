@@ -1,0 +1,14 @@
+{
+  "name": "hormi",
+  "version": "0.1.0",
+  "description": "Track your household expenses from Claude Code, over the official Hormi MCP server.",
+  "author": {
+    "name": "Hormi",
+    "email": "support@hormi.app",
+    "url": "https://hormi.app"
+  },
+  "homepage": "https://hormi.app/mcp",
+  "repository": "https://github.com/hormiapp/hormi-plugins",
+  "license": "MIT",
+  "keywords": ["expenses", "budget", "finance", "household", "gastos", "hormi", "mcp"]
+}
