@@ -47,8 +47,9 @@ ahi. Requiere Hormi Plus (los 14 dias de prueba cuentan).
 | `.plugin/plugin.json` | Clientes que leen el manifiesto generico |
 | `.claude-plugin/marketplace.json` | Claude Code exige el marketplace en la raiz del repositorio |
 
-Los tres manifiestos declaran lo mismo y conviven como pares: ninguno es el
-principal. Las habilidades solo las aprovechan los clientes que soportan Agent
+Los cuatro manifiestos declaran lo mismo y conviven como pares: ninguno es el
+principal. El de Grok agrega ademas `logo`, un campo que solo ese marketplace
+usa y que el validador de Claude Code rechaza en modo estricto. Las habilidades solo las aprovechan los clientes que soportan Agent
 Skills; el resto recibe igual las 16 herramientas y las instrucciones que el
 servidor envia en `initialize`.
 
